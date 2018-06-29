@@ -1,12 +1,12 @@
 <ion-header>
     <ion-navbar>
-      <ion-title>Productos</ion-title>
+      <ion-title>Productos Z8</ion-title>
     </ion-navbar>
   </ion-header>
   
   <ion-content padding>
     <h2>Listado de Productos</h2>
-  
+
   <ion-list>
     <ion-item-sliding *ngFor="let item of todo">
       <ion-item>
@@ -23,14 +23,13 @@
         </ion-item-options>
     </ion-item-sliding>
   </ion-list>
-      
-    
-    
+
+
+
     <ion-fab right bottom>
       <button ion-fab color="primary" (click)="newItem()">
         <ion-icon name="md-add"></ion-icon>
       </button>
     </ion-fab>
-  
+
   </ion-content>
-  
