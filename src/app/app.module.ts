@@ -7,9 +7,22 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { UregisterPage } from '../pages/uregister/uregister';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyBOk0rRvXXVpviEW2ra3NOAM4zAoa7qZxo",
+    authDomain: "ioniccrud-bedf6.firebaseapp.com",
+    databaseURL: "https://ioniccrud-bedf6.firebaseio.com",
+    projectId: "ioniccrud-bedf6",
+    storageBucket: "ioniccrud-bedf6.appspot.com",
+    messagingSenderId: "531025884942"
+}; 
+
 
 @NgModule({
   declarations: [
@@ -17,11 +30,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    UregisterPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -29,7 +45,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    UregisterPage,
   ],
   providers: [
     StatusBar,

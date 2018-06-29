@@ -3,8 +3,6 @@ import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 
-
-
 interface ToDo{
   
   producto: string;
@@ -14,11 +12,13 @@ interface ToDo{
   id?: string;
 }
 
+
+
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-uregister',
+  templateUrl: 'uregister.html',
 })
-export class HomePage {
+export class UregisterPage {
 
   todoCollection: AngularFirestoreCollection<ToDo>;
   todo: ToDo[];
