@@ -44,7 +44,7 @@ export class HomePage {
 newItem() {
 let prompt = this.alertCtrl.create({
   title: 'Añadir Actividad',
-  message: 'Ingresa la informacion solicitada',
+  message: 'Ingresa la informacion',
     inputs : [{
       name: 'producto',
       placeholder: 'Producto'
